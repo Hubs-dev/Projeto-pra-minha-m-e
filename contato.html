@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato & Informações | Aquarela Fantasias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🎨 Aquarela Fantasias</a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="personalizar.html">Personalizar</a>
+        <a href="contato.html" class="active">Contato & Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Onde nos encontrar</h2>
+    <p class="section-subtitle">Tudo que você precisa saber pra vir até a gente ou falar com a gente</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="icon">📍</div>
+        <h3>Endereço</h3>
+        <p>Rua perola, 108<br>Centro — CEP 01234-567<br>São joaquin / Mg</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🕒</div>
+        <h3>Horário</h3>
+        <p>Segunda a Sexta<br>9h às 17:30h<br>Sabado: 9h às 12</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">📱</div>
+        <h3>Telefone & WhatsApp</h3>
+        <p>(11) 98765-4321<br>Resposta rápida no WhatsApp<br></p>
+      </div>
+      <div class="info-card">
+        <div class="icon">✉️</div>
+        <h3>E-mail</h3>
+        <p>contato@aquarelafantasias.com.br<br>Resposta em até 24h úteis</p>
+      </div>
+    </div>
+
+    <div class="info-grid" style="margin-top: 1rem;">
+      <div class="info-card">
+        <div class="icon">💳</div>
+        <h3>Formas de pagamento</h3>
+        <p>Pix <br>Dinheiro na loja</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">🚚</div>
+        <h3>Entrega & Retirada</h3>
+        <p>Retirada na loja grátis<br>Entrega na região<br>Envio pelos Correios p/ todo Brasil</p>
+      </div>
+      <div class="info-card">
+        <div class="icon">⏳</div>
+        <h3>Prazo de personalização</h3>
+        <p>5 a 12 dias úteis<br>dependendo do modelo e da época<br><strong>Confirmamos o prazo no pedido</strong></p>
+      </div>
+    </div>
+
+    <div style="max-width: 600px; margin: 3rem auto 0; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 8px 24px rgba(233,30,99,0.15);">
+      <h3 style="color: #c2185b; margin-bottom: 1rem; text-align: center;">Deixe uma mensagem</h3>
+
+      <form id="contactForm" onsubmit="return enviarForm(event)">
+  <label>Nome</label>
+  <input type="text" id="nome" required placeholder="Seu nome">
+  
+  <label style="display:block; margin-top:1rem;">E-mail ou WhatsApp</label>
+  <input type="text" id="contato" required placeholder="Seu contato">
+  
+  <label style="display:block; margin-top:1rem;">Mensagem</label>
+  <textarea id="mensagem" rows="4" required placeholder="Conta pra gente o que precisa..."></textarea>
+  
+  <button type="submit" class="btn" style="width:100%; margin-top:1.2rem;" onclick="abrirWhatsApp()">Enviar mensagem</button>
+      </form>
+      
+      <p id="formFeedback" style="text-align:center; margin-top:1rem; color:#4caf50; display:none;">Mensagem enviada! A gente te responde em breve 💖</p>
+    </div>
+  </section>
+
+  <div class="chat-widget">
+    <div class="chat-box" id="chatBox">
+      <div class="chat-header">
+        <span>💬 Atendimento Aquarela</span>
+        <button id="chatClose" aria-label="Fechar">×</button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-input-area">
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem..." autocomplete="off">
+        <button id="chatSend">➤</button>
+      </div>
+    </div>
+    
+  </div>
+
+  <footer>
+    <p><strong>Aquarela Fantasias</strong> — Rua perola, 108 • São joaquin</p>
+    <p>Seg a Sex: 9h às 17:30h
+      Sab: 9h às 12h | WhatsApp: (11) 98765-4321</p>
+    <p>© 2026 Aquarela Fantasias. Todos os direitos reservados.</p>
+  </footer>
+
+ 
+  <script>
+  function enviarForm(event) {
+    event.preventDefault(); // impede a página de recarregar
+
+    const nome = document.getElementById('nome').value;
+    const contato = document.getElementById('contato').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // Aqui você pode mandar pro WhatsApp, e-mail, ou só mostrar um alert por enquanto
+
+    // Mostra o feedback
+    document.getElementById('formFeedback').style.display = 'block';
+    
+    // Limpa o formulário
+    document.getElementById('contactForm').reset();
+
+    return false;
+  }
+
+    
+function abrirWhatsApp() {
+
+  const nome = document.getElementById("nome").value
+  const contato = document.getElementById("contato").value
+  const msg = document.getElementById("mensagem").value
+
+  
+    const mensagem = encodeURIComponent("Olá! Vim pelo site."
+"nome: "+ nome
+"contato: "+ contato
+"mensagem: "+ mensagem);
+    window.location.href = "https://wa.me/553197521743?text=" + mensagem;
+}
+</script>
+</body>
+</html>

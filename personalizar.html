@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalizar Vestido | Aquarela Fantasias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">🎨 Aquarela Fantasias</a>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="personalizar.html" class="active">Personalizar</a>
+        <a href="contato.html">Contato & Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Monte o vestido dos seus sonhos</h2>
+    <p class="section-subtitle">Escolha cor, tamanho e estilo. Depois manda pra gente pelo chat que a gente confirma tudo.</p>
+
+    <div class="customizer">
+      <div class="preview-box">
+        <div class="dress-preview" id="dressPreview" style="background: #e91e63;"></div>
+        <p class="preview-label" id="previewLabel">Princesa • Rosa Choque • Tamanho M</p>
+        <p style="color:#888; font-size:0.9rem; margin-top:0.5rem;">Prévia ilustrativa</p>
+      </div>
+
+      <div class="options">
+        <div class="option-group">
+          <h3>Cor do vestido</h3>
+          <div class="colors">
+            <button class="color-btn" data-color="#e91e63" style="background:#e91e63;" title="Rosa Choque"></button>
+            <button class="color-btn" data-color="#9c27b0" style="background:#9c27b0;" title="Roxo"></button>
+            <button class="color-btn" data-color="#00bcd4" style="background:#00bcd4;" title="Turquesa"></button>
+            <button class="color-btn" data-color="#ff9800" style="background:#ff9800;" title="Laranja"></button>
+            <button class="color-btn" data-color="#4caf50" style="background:#4caf50;" title="Verde"></button>
+            <button class="color-btn" data-color="#f44336" style="background:#f44336;" title="Vermelho"></button>
+            <button class="color-btn" data-color="#2196f3" style="background:#2196f3;" title="Azul"></button>
+            <button class="color-btn" data-color="#ffeb3b" style="background:#ffeb3b;" title="Amarelo"></button>
+            <button class="color-btn" data-color="#795548" style="background:#795548;" title="Marrom"></button>
+            <button class="color-btn" data-color="#000000" style="background:#000000;" title="Preto"></button>
+            <button class="color-btn" data-color="#ffffff" style="background:#ffffff; border:1px solid #ccc;" title="Branco"></button>
+            <button class="color-btn" data-color="#e0e0e0" style="background:#e0e0e0;" title="Prata"></button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <h3>Tamanho</h3>
+          <div class="sizes">
+            <button class="size-btn" data-size="PP">PP</button>
+            <button class="size-btn" data-size="P">P</button>
+            <button class="size-btn" data-size="M">M</button>
+            <button class="size-btn" data-size="G">G</button>
+            <button class="size-btn" data-size="GG">GG</button>
+            <button class="size-btn" data-size="XG">XG</button>
+            <button class="size-btn" data-size="Infantil">Infantil</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <h3>Estilo</h3>
+          <div class="styles">
+            <button class="style-btn" data-style="Princesa">👑 Princesa (saia volumosa + tule)</button>
+            <button class="style-btn" data-style="Sereia">🧜 Sereia (ajuste no corpo + cauda)</button>
+            <button class="style-btn" data-style="Fada">🧚 Fada (leve + asas opcionais)</button>
+            <button class="style-btn" data-style="Rainha">💎 Rainha (brilho e paetês)</button>
+            <button class="style-btn" data-style="Vintage">🌹 Vintage (clássico e elegante)</button>
+            <button class="style-btn" data-style="Carnaval">🎉 Carnaval (plumas e muito brilho)</button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <h3>Observações / Pedido especial</h3>
+          <textarea id="pedidoTexto" rows="3" placeholder="Ex: quero laço na cintura, bordado com nome, manga longa, etc."></textarea>
+        </div>
+
+        <button class="btn" id="btnEnviarPedido" style="width:100%; margin-top:0.5rem;">Enviar pedido pro atendimento 💬</button>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p><strong>Aquarela Fantasias</strong> — Rua perola, 108 • São joaquin</p>
+    <p>Seg a Sex: 9h às 17:30h
+      Sab: 9h às 12h | WhatsApp: (11) 98765-4321</p>
+    <p>© 2026 Aquarela Fantasias. Todos os direitos reservados.</p>
+  </footer>
+
+ 
+  <script src="personalizar.js"></script>
+</body>
+</html>
